@@ -1,17 +1,6 @@
-# lumos
+# About
+inspired by [Luca Nardi (Portfolio)](https://www.aboutluca.com/).
 
-```
-gh repo clone nemutas/lumos
-```
+https://nemutas.github.io/lumos/
 
-```
-npm install
-```
-
-# using
-
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Sass](https://sass-lang.com/)
-- [vite-plugin-glsl](https://github.com/UstymUkhman/vite-plugin-glsl)
-- [WebGL GLSL Editor](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor) (v1.3.0 -> If the extension is set to glsl, errors originating from threejs built-in variables will not occur.)
+<img src='https://user-images.githubusercontent.com/46724121/219391392-8570e4cd-0d38-46c3-a484-689cc7e30d70.jpg' width='800' />
