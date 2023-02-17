@@ -3277,12 +3277,14 @@ void main() {
   light = pow(light, 8.0);
   light *= 1.0 - step(0.9, mDist);
 
-  float nn = snoise(vec3(uv * 1.3 - uTime * 0.1, uTime * 0.1));
-  nn = smoothstep(-0.5, 0.5, nn);
+  float nn = snoise(vec3(uv * 1.8 - uTime * 0.15, uTime * 0.2));
+  nn += snoise(vec3(uv * 5.0 - uTime * 0.15, uTime * 0.2)) * 0.3;
+  float nnn = smoothstep(-1.0, 0.5, nn);
 
-  smoke.rgb *= light * (0.4 - 0.1) + 0.1 + nn * 0.4;
+  smoke.rgb *= nnn * (0.15 - 0.1) + 0.1;
+  smoke.rgb += nnn * 0.06;
   smoke.rgb += light;
-  smoke.rgb = blendScreen(smoke.rgb, vec3(nn * 0.05), 1.0);
+  smoke.rgb = blendScreen(smoke.rgb, vec3(nn), light);
 
   gl_FragColor = smoke;
 }`,Cm=`varying vec2 vUv;
